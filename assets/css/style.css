@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 header {
-    background-color:  #015054; /*#051f45; */
+    background-color:  #015054; 
     color: white;
-    padding: 74px;
+    padding: 25px;
     text-align: center;
 }
 /* Estilos gerais */ 
@@ -17,19 +17,19 @@ body {
 
 /* Layout principal */
 main {
-    margin-top: 120px;
+    margin-top: 50px;
 }
 
 /* Tema Claro */
 body.claro {
-    background-color: #ebf1cf;
+    background-color: #daf1eb;
     color: black;
 }
 
 /* Tema Escuro */
 body.escuro {
     background-color: #121212;
-    color: #f2f2f2; 
+    color: black; 
 }
 
 /* Estilo do título */
@@ -39,7 +39,7 @@ h1 {
 
 /* Botão */
 button {
-    position: fixed;
+    position: fixed; 
     top: 20px;
     right: 20px;
     background-color: #2a959c;
@@ -55,26 +55,36 @@ button:hover {
     background-color: #65faffb4;
 }
 
-
+#minha-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
 
 #sobre-mim {
     display: block;
     background-color: #015054;
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
-    padding: 40px;
-    border-radius: 20px;
+    padding: 20px;
+    border-radius: 30px;
     margin-bottom: 40px;
     color: white;
 }    
 
 #habilidades {
-    background-color: rgb(255, 245, 158);
+    background-color: #c2eee0; 
     width: 80%;
     margin: 0 auto;
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -84,33 +94,38 @@ button:hover {
 }
 
 
-ul {
+#habilidades ul {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 16px;;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-li {
-    background-color:  #5abbc2;
+#habilidades li {
+    background-color:  #4fa6ad;
     padding: 8px;
     border-left: 4px solid #015054;
     border-radius: 18px;
     font-size: 16;
-    min-width: 250px;
+    min-width: 150px;
     color: white;
+    text-align: center;
+    align-items: center;
 }
 
-li:hover {
-    background-color:  #65faffb4;
+#habilidades li:hover {
+    background-color:  #015054;
     transform: translateX(5px);
     transition: all 0.3s ease;
 }
 
 
-#contato{
+#contato {
     background-color: #015054;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     padding: 20px;
     border-radius: 20px;
@@ -148,13 +163,212 @@ li:hover {
 
 
 footer {
-    background-color:  rgb(255, 246, 168);
-    color:#1b263b;
+    background-color: #015054;
+    color:white;
     text-align: center;
-    padding: 2rem;
+    padding: 10px;
     width: 100%;
 }
 
 footer p {
     font-size: 1rem;
+}
+
+/* RESPONSIVIDADE */
+
+/* TABLETS */
+@media (max-width: 992px) {
+
+    header {
+        padding: 30px 20px;
+    }
+
+    #sobre-mim,
+    #habilidades,
+    #contato {
+        width: 85%;
+        padding: 30px;
+    }
+
+    ul {
+        gap: 12px;
+    }
+
+    li {
+        min-width: 130px;
+        font-size: 15px;
+        padding: 8px 14px;
+    }
+}
+
+
+ /*  CELULARES */ 
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    button {
+        top: 15px;
+        right: 10px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    #sobre-mim,
+    #habilidades,
+    #contato {
+        width: 90%;
+        padding: 25px;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    li {
+        min-width: 120px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #contato p {
+        font-size: 14px;
+    }
+}
+
+/* CELULARES PEQUENOS  */
+@media (max-width: 480px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 7px 12px;
+        font-size: 12px;
+        top: 10px;
+    }
+
+    #sobre-mim,
+    #habilidades,
+    #contato {
+        width: 92%;
+        padding: 20px;
+    }
+
+    ul {
+        gap: 8px;
+    }
+
+    li {
+        min-width: 100px;
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    #contato a {
+        display: block;
+        margin: 10px auto;
+        width: 70%;
+        font-size: 14px;
+    }
+}
+
+/* RESPONSIVIDADE SIMPLES */
+
+/* TELAS MÉDIAS */
+@media (max-width: 992px) {
+
+    #sobre-mim, 
+    #habilidades, 
+    #contato {
+        width: 85%;
+        padding: 30px;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    li {
+        min-width: 130px;
+        font-size: 15px;
+    }
+}
+
+/* CELULARES (padrão) */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    button {
+        top: 12px;
+        right: 12px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    #sobre-mim, 
+    #habilidades, 
+    #contato {
+        width: 90%;
+        padding: 25px;
+    }
+
+    li {
+        min-width: 120px;
+        font-size: 14px;
+    }
+
+    #contato a {
+        font-size: 14px;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    #sobre-mim, 
+    #habilidades, 
+    #contato {
+        width: 95%;
+        padding: 20px;
+    }
+
+    li {
+        min-width: 100px;
+        font-size: 13px;
+    }
+
+    #contato a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
 }
